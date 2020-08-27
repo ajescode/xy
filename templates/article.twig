@@ -1,0 +1,21 @@
+<div id="article_list">
+    <div class="article_preview row bg-light">
+        <div class="col-8">
+            <div class="date">{{ date }}</div>
+            <div class="title">{{ title }}</div>
+            <div class="text">{{ text }}</div>
+            <div class="author">Autor: {{ author }}</div>
+            <div class="comments">Kommentare
+            {{% for comment in comments %}}</div>
+        </div>
+        <div class="col-2">
+            <img src="{{ article.img_url }}"/>
+        </div>
+        <div class=" clearfix">
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+<div id="pagination">
+</div>

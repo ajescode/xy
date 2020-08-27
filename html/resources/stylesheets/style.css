@@ -1,0 +1,21 @@
+.nav-item {
+    margin:5px;
+}
+
+#article_list {
+    width:900px;
+    margin:0 auto;
+}
+
+.article_preview {
+    margin:20px;
+    padding:10px;
+}
+#login_form {
+    padding:20px;
+}
+
+#login_form .alert-warning {
+    margin:20px;
+    margin-bottom:50px;
+}

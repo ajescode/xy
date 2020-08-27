@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="resources/stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+    <div class="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="resources/images/logo.png" width="150px" height="150px"/>
+        </a>
+        <h1>Blog title</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a href="index.php">Ubsersicht</a></li>
+                {% if is_admin %}
+                    <li class="nav-item"><a href="add.php">[Neuer Eintrag]</a></li>
+                {% endif %}
+                <li class="nav-item"><a href="imprint.php">Impressum</a></li>
+            </ul>
+        </div>
+        <div id="login">
+            {% if not is_logged %}
+                <a href="login.php">Login</a>
+            {% else %}
+                <a href="logout.php">Logout, {{ user_login }}!</a>
+            {% endif %}
+        </div>
+    </nav>
+</header>
+<main>
